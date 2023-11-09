@@ -38,10 +38,26 @@ class _EmployeeListState extends State<EmployeeList> {
               itemCount: employees.length,
               itemBuilder: (context, index) {
                 var employee = employees[index];
-                return ListTile(
-                  title: Text(employee.name),
-                  subtitle: Text(employee.position),
-                  // Display other employee details as needed
+                return Material(
+                  elevation: 4,
+                  child: Container(
+                    height: 100,
+                    width: double.infinity,
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: ListTile(
+                            title: Text(employee.name),
+                            subtitle: Text(employee.position),
+
+                            // Display other employee details as needed
+                          ),
+                        ),
+                        Expanded(child: Text(employee.joiningDate)),
+                        Expanded(child: Text(employee.leavingDate)),
+                      ],
+                    ),
+                  ),
                 );
               },
             );

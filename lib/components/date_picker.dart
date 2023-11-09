@@ -54,7 +54,7 @@ class _CustomDatePickerWidgetState extends State<CustomDatePickerWidget> {
                   children: [
                     Icon(Icons.calendar_today),
                     SizedBox(width: 8),
-                    Text(' ${_formattedDate(_selectedDate)}'),
+                    Text(' ${formattedDate(_selectedDate)}'),
                   ],
                 ),
                 Row(
@@ -135,7 +135,7 @@ class _CustomDatePickerWidgetState extends State<CustomDatePickerWidget> {
     return DateTime.now().add(Duration(days: daysUntilNextTuesday));
   }
 
-  String _formattedDate(DateTime date) {
+  String formattedDate(DateTime date) {
     return DateFormat('d MMM y').format(date);
   }
 }
