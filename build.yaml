@@ -1,0 +1,9 @@
+targets:
+  $default:
+    builders:
+      hive_generator:
+        enabled: true
+        options:
+          buildType: dynamic
+          targets:
+            - 'lib/models/*.dart' # Adjust the path to match your project structure
